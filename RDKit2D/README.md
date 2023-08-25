@@ -1,0 +1,1 @@
+Code for all 22 ADMET data sets (https://tdcommons.ai/benchmark/admet_group/overview/) using RDKit2D descriptors (https://www.blopig.com/blog/2022/06/how-to-turn-a-molecule-into-a-vector-of-physicochemical-descriptors-using-rdkit/) is provided here.
