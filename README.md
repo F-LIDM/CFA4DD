@@ -1,4 +1,10 @@
-# CFA_on_ADMET
+[![License:
+MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PyPI version](https://badge.fury.io/py/cfanalysis.svg)](https://badge.fury.io/py/cfanalysis)
+[![Downloads](https://static.pepy.tech/badge/cfanalysis)](https://www.pepy.tech/projects/cfanalysis)
+[![Downloads](https://static.pepy.tech/badge/cfanalysis/month)](https://www.pepy.tech/projects/cfanalysis)
+
+# cfanalysis
 The repository provides code and data for the paper "Enhancing ADMET Property Models Performance through Combinatorial Fusion Analysis", categorized by drug encoding schemes: Morgan Circular Fingerprints, RDKit 2D descriptors, and MCFP. 
 
 # Python package: cfanalysis
@@ -13,7 +19,7 @@ A Combinatorial Fusion Analysis (CFA) to enhance Absorption, Distribution, Metab
 
 You can install this package using `pip`. Run the following commands to install it and then import it:
 
-```bash
+```python
 pip install cfanalysis==0.1.9
 import cfanalysis
 from cfanalysis import cfafunctions
@@ -24,7 +30,7 @@ from cfanalysis import cfafunctions
 An example using [Therapeutic Data Common's](https://tdcommons.ai/) (TDC) `Clearance_Microsome_AZ` dataset. 
 ### Import the required libraries
 
-```bash
+```python
 import numpy as np
 import pandas as pd
 
@@ -36,7 +42,7 @@ from tdc import BenchmarkGroup
 ### Import the TDC dataset and input our predictions: :warning: you may use your own dataset and predictions
 `Clearance_Microsome_AZ` has a continuous target variable (regression) 
 
-```bash
+```python
 group = admet_group(path = 'data/')
 name = 'Clearance_Microsome_AZ' #you need to change dataset name to get the model fusion result
 benchmark = group.get(name)
@@ -60,8 +66,8 @@ predictions_test_rf = pd.read_csv('%s_predictions_test_rf.csv' % name)
 predictions_test_svm = pd.read_csv('%s_predictions_test_svm.csv' % name)
 ```
 
-### :memo: Input model data: 
-```bash
+### :memo: Input model data 
+```python
 model_names = ['xgb', 'rf', 'svm'] # mention model names 
 preds = cfafunctions.model_predictions(
     len(model_names),
@@ -88,13 +94,13 @@ preds = cfafunctions.model_predictions(
 cfafunctions.calculate_spearman_corr(model_names, preds, y_test, y_valid) # use Spearman-Rank correlation (regression) 
 ```
 Other options for metrics for CFA
-```bash
+```python
 >> cfafunctions.calculate_MAE(model_names, preds, y_test, y_valid) # use Mean Absolute Error (regression) 
 >> cfafunctions.calculate_auroc(model_names, preds, y_test, y_valid) # use Area Under the Receiver Operating Characteristics (classification)
 >> cfafunctions.calculate_auprc(model_names, preds, y_test, y_valid) # use Area Under the Precision-Recall Curve (classification)
 ```
 
-### :chart_with_upwards_trend: Interpreting results: 
+### :chart_with_upwards_trend: Interpreting results 
 ```
 modelcombination_ds: implies diversity strength
 modelcombination_r: implies rank combination
@@ -103,3 +109,16 @@ modelcombination: implies average score strength
 modelname: implies raw model metric
 ```
 
+## :paperclip: Citation 
+Jiang, Nan, et al. "Enhancing ADMET Property Models Performance through Combinatorial Fusion Analysis." arXiv preprint arXiv:#### (2023).
+```bib
+@article{Jiang2023cfa,
+      title={Enhancing ADMET Property Models Performance through Combinatorial Fusion Analysis}, 
+      author={Nan Jiang and Mohammed Quazi and Christina Schweikert and D. Frank Hsu and Tudor I. Oprea and Suman Sirimulla},
+      year={2023},
+      eprint={####},
+      archivePrefix={arXiv},
+      primaryClass={####},
+      publisher={arXiv}
+}
+```
