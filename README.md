@@ -89,7 +89,7 @@ preds = cfafunctions.model_predictions(
 
 :warning: Predictions, `val_dfs_list` and `test_dfs_list`, need to be probabilities for the positive class for classification ML models and predictions from 5 seeds are required for each model. 
 
-### :white_check_mark: Obtain the results from the CFA analysis: 
+### :white_check_mark: Obtain the results from the CFA analysis 
 ```bash
 cfafunctions.calculate_spearman_corr(model_names, preds, y_test, y_valid) # use Spearman-Rank correlation (regression) 
 ```
