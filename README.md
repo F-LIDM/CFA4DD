@@ -8,7 +8,7 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
 The repository provides code and data for the paper "Enhancing ADMET Property Models Performance through Combinatorial Fusion Analysis", categorized by drug encoding schemes: Morgan Circular Fingerprints, RDKit 2D descriptors, and MCFP. 
 
 # Python package: cfanalysis
-
+## Author: Mohammed Quazi
 [Library to perform Combinatorial Fusion Analysis](https://pypi.org/project/cfanalysis/)
 
 ## :warning: Introduction
@@ -110,6 +110,7 @@ modelname: implies raw model metric
 ```
 
 ## :paperclip: Citation 
+DOI: 10.26434/chemrxiv-2023-dh70x(https:10.26434/chemrxiv-2023-dh70x)
 Jiang, Nan, et al. "Enhancing ADMET Property Models Performance through Combinatorial Fusion Analysis." arXiv preprint arXiv:#### (2023).
 ```bib
 @article{Jiang2023cfa,
