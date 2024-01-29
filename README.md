@@ -110,7 +110,7 @@ modelname: implies raw model metric
 ```
 
 ## :paperclip: Citation 
-DOI: 10.26434/chemrxiv-2023-dh70x(https:10.26434/chemrxiv-2023-dh70x)
+DOI: [10.26434/chemrxiv-2023-dh70x](https:10.26434/chemrxiv-2023-dh70x)
 
 Jiang, Nan, et al. "Enhancing ADMET Property Models Performance through Combinatorial Fusion Analysis." ChemRxiv preprint (2023).
 ```bib
